@@ -1,0 +1,57 @@
+sample_data:
+  users:
+  - address:
+      city: New York
+      zipcode: '10001'
+    age: 30
+    email: johndoe@example.com
+    name: John Doe
+  - address:
+      city: Los Angeles
+      zipcode: '90001'
+    age: 25
+    email: janesmith@example.com
+    name: Jane Smith
+  - address:
+      city: Chicago
+      zipcode: '60601'
+    age: 35
+    email: mikejohnson@example.com
+    name: Mike Johnson
+users:
+  description: ユーザー情報の配列
+  items:
+  - properties:
+      address:
+        description: ユーザーの住所情報
+        properties:
+          city:
+            description: 都市名
+            example: New York
+            required: true
+            type: string
+          zipcode:
+            description: 郵便番号
+            example: '10001'
+            required: true
+            type: string
+        required: true
+        type: object
+      age:
+        description: ユーザーの年齢
+        example: 30
+        required: true
+        type: integer
+      email:
+        description: ユーザーのメールアドレス
+        example: johndoe@example.com
+        format: email
+        required: true
+        type: string
+      name:
+        description: ユーザーのフルネーム
+        example: John Doe
+        required: true
+        type: string
+    type: object
+  type: array

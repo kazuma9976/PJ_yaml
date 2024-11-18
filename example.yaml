@@ -1,0 +1,18 @@
+- name: John Doe
+  age: 30
+  city: New York
+  skills:
+    - Python
+    - Data Analysis
+  address:
+    street: 123 Main St
+    zip: 10001
+- name: Jane Smith
+  age: 25
+  city: Los Angeles
+  skills:
+    - JavaScript
+    - Web Development
+  address:
+    street: 456 Sunset Blvd
+    zip: 90001

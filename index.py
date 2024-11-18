@@ -14,10 +14,11 @@ def flatten_user_data(yaml_data):
             'Name': user['name'],
             'Age': user['age'],
             'Email': user['email'],
-            'City': user['address']['city'],
-            'Zipcode': user['address']['zipcode']
+            'Adress1': user['address']['city'],
+            'Adress2': user['address']['zipcode'],
         }
         user_list.append(flat_user)
+        print(user_list)
     return user_list
 
 # 3. データをExcelに書き込み
@@ -40,4 +41,4 @@ if __name__ == "__main__":
     # 3. フラット化したデータをExcelに書き込む
     write_to_excel(user_list, excel_file_path)
 
-    print(f"YAMLファイルがExcelファイル '{excel_file_path}' に変換されました。")
+    print("YAMLファイルがExcelファイル '{excel_file_path}' に変換されました。")
